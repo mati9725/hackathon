@@ -6,5 +6,22 @@ def variables_generator(data):
     data['new_5'] = data['tGravityAcc-mean()-Y'] * data['tGravityAcc-mean()-Z']
     data['new_6'] = data['tGravityAcc-max()-Y'] - data['tGravityAcc-min()-Y']
     data['new_7'] = data['tGravityAcc-correlation()-X,Y'] * data['tGravityAcc-correlation()-X,Y'] * data['tGravityAcc-correlation()-X,Y']
-    data['new_8'] = data['angle(Y,gravityMean)'] * data['angle(Y,gravityMean)'] * data['angle(Y,gravityMean)']
+
+    data['new_8'] = data['tGravityAcc-correlation()-X,Y'] + data['tGravityAcc-max()-Y'] 
+    data['new_9'] = data['fBodyGyro-meanFreq()'] + 2 * data['angle(Z,gravityMean)'] + data['angle(Y,gravityMean)']
+    data['new_10'] = data['tGravityAcc-max()-Y'] + data['angle(Y,gravityMean)'] 
+    data['new_11'] = data['tGravityAcc-mean()-Z'] * data['angle(Z,gravityMean)']
+    data['new_12'] = data['angle(Y,gravityMean)'] + data['tGravityAcc-max()-Y'] 
+    data['new_13'] = data['tGravityAcc-mean()-Z'] + data['tGravityAcc-min()-Y'] 
+    data['new_14'] = data['angle(Y,gravityMean)'] + data['fBodyGyroJerk-arCoeff()-X,1'] 
+    data['new_15'] = (data['fBodyGyro-entropy()-X'] * data['tGravityAcc-max()-Y']) + data['tGravityAcc-correlation()-X,Y']
+
+    data['new_16'] = data['angle(Y,gravityMean)'] * data['angle(Y,gravityMean)'] * data['angle(Y,gravityMean)']
+    data['new_17'] = data['angle(Y,gravityMean)'] * data['angle(Y,gravityMean)'] * data['angle(Y,gravityMean)']
+    data['new_18'] = data['angle(Y,gravityMean)'] * data['angle(Y,gravityMean)'] * data['angle(Y,gravityMean)']
+    data['new_19'] = data['angle(Y,gravityMean)'] * data['angle(Y,gravityMean)'] * data['angle(Y,gravityMean)']
+    data['new_20'] = data['angle(Y,gravityMean)'] * data['angle(Y,gravityMean)'] * data['angle(Y,gravityMean)']
+    data['new_21'] = data['angle(Y,gravityMean)'] * data['angle(Y,gravityMean)'] * data['angle(Y,gravityMean)']
+    data['new_22'] = data['angle(Y,gravityMean)'] * data['angle(Y,gravityMean)'] * data['angle(Y,gravityMean)']
+    data['new_22'] = data['angle(Y,gravityMean)'] * data['angle(Y,gravityMean)'] * data['angle(Y,gravityMean)']
     return data
